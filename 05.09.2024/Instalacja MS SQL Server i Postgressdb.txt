@@ -1,0 +1,84 @@
+### Instalacja MS SQL Server
+
++Kroki instalacji Microsoft SQL Server (na Windows):
+
+1. **Pobranie oprogramowania**:
+   - Pobierz najnowszą wersję instalatora MS SQL Server ze strony Microsoftu.
+
+2. **Uruchomienie instalatora**:
+   - Po pobraniu, uruchom plik .exe instalatora.
+
+3. **Wybór typu instalacji**:
+   - Wybierz "New SQL Server stand-alone installation" dla nowej instalacji.
+   - Możesz również wybrać instalację w trybie zintegrowanym z innym oprogramowaniem lub funkcje dodatkowe.
+
+4. **Sprawdzenie wymagań wstępnych**:
+   - Instalator przeprowadzi kontrolę wymagań wstępnych, takich jak wersja systemu operacyjnego, dostępność aktualizacji itd.
+
+5. **Wybór wersji**:
+   - Wybierz wersję SQL Server, którą chcesz zainstalować (Express, Standard, Enterprise itp.).
+
+6. **Akceptacja warunków licencyjnych**:
+   - Zaakceptuj warunki licencyjne, aby kontynuować instalację.
+
+7. **Wybór komponentów**:
+   - Wybierz komponenty do instalacji, takie jak:
+     - Database Engine Services (podstawowy silnik baz danych).
+     - Full-Text Search.
+     - Analysis Services, Reporting Services itp.
+   
+8. **Konfiguracja instancji**:
+   - Możesz zainstalować domyślną instancję lub nazwaną instancję SQL Server.
+
+9. **Konfiguracja serwera**:
+   - Ustawienia konta serwisowego (możesz użyć konta lokalnego lub zdefiniowanego przez użytkownika).
+   - Możesz skonfigurować tryb uwierzytelniania (Windows Authentication Mode lub Mixed Mode).
+   - Dodać administratorów SQL Server.
+
+10. **Konfiguracja baz danych**:
+    - Określ lokalizację plików danych, logów, tempdb, itp.
+
+11. **Instalacja i zakończenie**:
+    - Kliknij „Install”, aby rozpocząć proces instalacji.
+    - Po zakończeniu instalacji, uruchom "SQL Server Management Studio (SSMS)" w celu zarządzania bazami danych.
+
+12. **Testowanie po instalacji**:
+    - Po zakończeniu instalacji, uruchom serwer SQL, aby upewnić się, że wszystko działa prawidłowo.
+
++Instalacja PostgreSQL
+
+1. **Pobranie oprogramowania**:
+   - Pobierz najnowszą wersję PostgreSQL z oficjalnej strony [PostgreSQL](https://www.postgresql.org/download/).
+
+2. **Uruchomienie instalatora**:
+   - Po pobraniu uruchom plik instalacyjny .exe.
+
+3. **Wybór lokalizacji instalacji**:
+   - Wybierz miejsce, gdzie PostgreSQL ma być zainstalowany (domyślna lokalizacja to "C:\Program Files\PostgreSQL").
+
+4. **Wybór komponentów**:
+   - Wybierz komponenty, które chcesz zainstalować, takie jak:
+     - PostgreSQL Server
+     - pgAdmin (graficzny interfejs do zarządzania bazą danych)
+     - Stack Builder (narzędzie do instalacji dodatkowych narzędzi i rozszerzeń).
+
+5. **Wybór katalogu dla danych**:
+   - Określ lokalizację, gdzie będą przechowywane dane baz danych (domyślnie w folderze "data").
+
+6. **Ustawienia użytkownika i portu**:
+   - Zdefiniuj hasło dla użytkownika "postgres" (superużytkownik).
+   - Określ port, na którym PostgreSQL będzie nasłuchiwał (domyślnie 5432).
+
+7. **Ustawienia regionalne**:
+   - Wybierz ustawienia regionalne dla bazy danych (domyślnie "C").
+
+8. **Instalacja**:
+   - Kliknij „Next” i rozpocznij instalację. Proces potrwa kilka minut.
+
+9. **Konfiguracja po instalacji**:
+   - Po zakończeniu instalacji, PostgreSQL uruchomi się automatycznie.
+   - Użyj pgAdmin lub narzędzi linii poleceń, takich jak `psql`, do zarządzania bazami danych.
+
+10. **Testowanie po instalacji**:
+    - Uruchom phpmyadmin, zaloguj się do serwera PostgreSQL za pomocą zdefiniowanego wcześniej hasła, i stwórz nową bazę danych, aby 	upewnić się, że wszystko działa poprawnie.
+
