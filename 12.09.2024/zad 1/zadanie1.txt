@@ -1,0 +1,50 @@
+ALTER TABLE karty_wedkarskie
+ADD COLUMN telefon VARCHAR(15) DEFAULT NULL,
+ADD COLUMN email VARCHAR(50) DEFAULT NULL;
+
+ALTER TABLE lowisko
+ADD COLUMN powierzchnia FLOAT DEFAULT NULL,
+ADD COLUMN glebokosc FLOAT DEFAULT NULL;
+
+ALTER TABLE zawody_wedkarskie
+ADD COLUMN liczba_zawodnikow INT(10) UNSIGNED DEFAULT NULL,
+ADD COLUMN nagroda VARCHAR(100) DEFAULT NULL;
+
+SELECT data_zawodow
+FROM zawody_wedkarskie
+WHERE sedzia = 'Jan Kowalewski';
+
+SELECT DISTINCT Karty_wedkarskie_id
+FROM zawody_wedkarskie
+WHERE MONTH(data_zawodow) = 6;
+
+SELECT k.imie, k.nazwisko
+FROM zawody_wedkarskie z
+JOIN karty_wedkarskie k ON z.Karty_wedkarskie_id = k.id
+WHERE MONTH(z.data_zawodow) = 6;
+
+SELECT *
+FROM lowisko
+WHERE wojewodztwo = 'Podkarpackie';
+
+SELECT *
+FROM lowisko
+WHERE rodzaj = 3;
+
+SELECT akwen
+FROM lowisko
+WHERE akwen LIKE '%rz%';
+
+SELECT DISTINCT wojewodztwo
+FROM lowisko;
+
+SELECT imie, nazwisko
+FROM karty_wedkarskie
+WHERE nazwisko LIKE 'K%';
+
+SELECT imie, nazwisko
+FROM karty_wedkarskie;
+
+UPDATE karty_wedkarskie
+SET punkty = 10
+WHERE id = 2;

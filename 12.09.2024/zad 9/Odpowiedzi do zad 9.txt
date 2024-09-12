@@ -1,0 +1,49 @@
+PYTANIA:
+1. Co to jest baza danych?
+2. Jakie są podstawowe cele stosowania baz danych?
+3. Jakie są główne składniki bazy danych?
+4. Jakie są różnice między danymi a informacjami w bazie danych?
+5. Jakie są trzy podstawowe rodzaje baz danych?
+6. Co to jest schemat bazy danych?
+7. Jakie są podstawowe operacje przetwarzania danych w bazie danych?
+8. Co to jest klucz główny w tabeli bazy danych?
+9. Jakie są podstawowe typy danych używane w bazach danych?
+10. Co to jest zapytanie SQL i do czego służy?
+11. Jakie są podstawowe rodzaje relacji między tabelami w bazie danych relacyjnej?
+12. Czym różni się baza danych online od bazy danych offline?
+13. Jakie są podstawowe rodzaje błędów, z jakimi można się spotkać w bazach danych?
+14. Jakie są podstawowe zastosowania baz danych w różnych dziedzinach?
+15. Jakie są podstawowe zasady projektowania relacyjnych baz danych?
+16. Co to jest relacyjny model baz danych?
+17. Co to jest tabela?
+18. Co to jest atrybut?
+19. Co to jest relacja?
+20. Jakie są wymagania dla klucza głównego?
+21. Jakie są różnice między kluczem głównym a kluczem obcym?
+22. Przykłady kluczy podstawowych.
+23. Etapy projektowania baz danych.
+
+ODPOWIEDZI:
+1. Baza danych to zbiór zorganizowanych danych, które są przechowywane i zarządzane w systemie komputerowym.
+2. Celem stosowania baz danych jest efektywne przechowywanie, przetwarzanie i wyszukiwanie danych.
+3. Główne składniki bazy danych to tabele, dane i oprogramowanie do zarządzania bazą (DBMS).
+4. Dane to surowe wartości, a informacje to dane przetworzone i zrozumiałe.
+5. Trzy podstawowe rodzaje baz danych to relacyjne, nierelacyjne i obiektowe.
+6. Schemat bazy danych to struktura organizująca sposób przechowywania danych w bazie.
+7. Podstawowe operacje to wstawianie, aktualizacja, usuwanie i wyszukiwanie danych.
+8. Klucz główny to unikalny identyfikator każdego rekordu w tabeli.
+9. Podstawowe typy danych to liczby całkowite, tekst, daty i wartości logiczne.
+10. Zapytanie SQL służy do manipulacji i pobierania danych z bazy danych.
+11. Podstawowe relacje między tabelami to jeden-do-jednego, jeden-do-wielu i wiele-do-wielu.
+12. Baza online jest dostępna z sieci, a offline działa lokalnie, bez połączenia internetowego.
+13. Podstawowe błędy to np. błędy logiczne, naruszenia integralności danych i błędy dostępu.
+14. Bazy danych są stosowane w bankowości, handlu, administracji, medycynie i innych dziedzinach.
+15. Zasady projektowania to normalizacja, unikanie redundancji i poprawne relacje między tabelami.
+16. Relacyjny model baz danych opiera się na tabelach, które przechowują dane w postaci wierszy i kolumn.
+17. Tabela to zbiór powiązanych danych w bazie, zorganizowanych w wiersze i kolumny.
+18. Atrybut to kolumna w tabeli, reprezentująca cechę lub właściwość danych.
+19. Relacja to powiązanie między danymi w różnych tabelach.
+20. Klucz główny musi być unikalny i nie może zawierać wartości NULL.
+21. Klucz główny identyfikuje unikalny rekord, a klucz obcy tworzy relacje między tabelami.
+22. Przykłady kluczy podstawowych: numer PESEL, ID pracownika, numer seryjny produktu.
+23. Etapy projektowania bazy danych to analiza wymagań, modelowanie, implementacja i optymalizacja.

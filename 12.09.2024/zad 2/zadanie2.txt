@@ -1,0 +1,139 @@
+CREATE TABLE osoby (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  imie VARCHAR(30),
+  nazwisko VARCHAR(50)
+);
+
+DESCRIBE osoby;
+
+SELECT * FROM osoby;
+
+CREATE TABLE osoby (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  imie VARCHAR(30),
+  nazwisko VARCHAR(50)
+);
+
+CREATE TABLE osoby (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  imie VARCHAR(30),
+  nazwisko VARCHAR(50)
+);
+
+CREATE TABLE IF NOT EXISTS osoby (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  imie VARCHAR(30),
+  nazwisko VARCHAR(50)
+);
+
+ALTER TABLE osoby
+ADD COLUMN miasto CHAR(30);
+
+DESCRIBE osoby;
+
+SELECT * FROM osoby;
+
+ALTER TABLE osoby
+CHANGE COLUMN miasto miejscowosc CHAR(30);
+
+DESCRIBE osoby;
+
+SELECT * FROM osoby;
+
+ALTER TABLE osoby
+MODIFY COLUMN miejscowosc VARCHAR(30);
+
+DESCRIBE osoby;
+
+SELECT * FROM osoby;
+
+ALTER TABLE osoby
+ADD COLUMN nip CHAR(10) FIRST;
+
+DESCRIBE osoby;
+
+SELECT * FROM osoby;
+
+ALTER TABLE osoby
+DROP COLUMN nip;
+
+DESCRIBE osoby;
+
+SELECT * FROM osoby;
+
+ALTER TABLE osoby
+ADD COLUMN wzrost INT NOT NULL;
+
+DESCRIBE osoby;
+
+SELECT * FROM osoby;
+
+CREATE TABLE klienci AS
+SELECT * FROM osoby;
+
+DESCRIBE klienci;
+
+SELECT * FROM klienci;
+
+SHOW TABLES;
+
+DROP TABLE klienci;
+
+SHOW TABLES;
+
+DROP TABLE klienci;
+
+DROP TABLE IF EXISTS klienci;
+
+INSERT INTO osoby (imie, nazwisko, miejscowosc, wzrost)
+VALUES ('Jan', 'Kowalski', 'Poznań', 170);
+
+SELECT * FROM osoby;
+
+INSERT INTO osoby (imie, nazwisko, miejscowosc, wzrost)
+VALUES 
+('Anna', 'Kowalska', 'Poznań', 170), 
+('Adam', 'Nowak', 'Poznań', 178), 
+('Agnieszka', 'Nowaczyk', 'Radom', 169), 
+('Olaf', 'Kowalczyk', 'Radom', 177), 
+('Joanna', 'Nowaczyńska', 'Radom', 172);
+
+SELECT * FROM osoby;
+
+INSERT INTO osoby (imie, nazwisko)
+VALUES ('Beata', 'Adamczak');
+
+SELECT * FROM osoby;
+
+UPDATE osoby
+SET imie = 'Jadwiga'
+WHERE id = 3;
+
+SELECT * FROM osoby;
+
+DELETE FROM osoby
+WHERE id = 3;
+
+SELECT * FROM osoby;
+
+UPDATE osoby
+SET miejscowosc = 'Swarzędz'
+WHERE miejscowosc = 'Radom';
+
+SELECT * FROM osoby;
+
+DELETE FROM osoby
+WHERE imie LIKE '%nna';
+
+SELECT * FROM osoby;
+
+SELECT * FROM osoby
+WHERE wzrost BETWEEN 169 AND 171;
+
+SELECT imie, COUNT(*)
+FROM osoby
+GROUP BY imie;
+
+SELECT imie, COUNT(*)
+FROM osoby
+GROUP BY imie;
