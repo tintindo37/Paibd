@@ -1,0 +1,93 @@
+-- Tworzenie bazy danych
+CREATE DATABASE zapytania_nazwisko;
+
+-- Używanie bazy danych
+USE zapytania_nazwisko;
+
+-- Tworzenie tabeli
+CREATE TABLE pracownicy (
+    id INT PRIMARY KEY,
+    imie VARCHAR(50),
+    nazwisko VARCHAR(50),
+    placa DECIMAL(10, 2),
+    stanowisko VARCHAR(50),
+    pesel VARCHAR(11)
+);
+
+-- Wstawianie danych do tabeli
+INSERT INTO pracownicy (id, imie, nazwisko, placa, stanowisko, pesel) VALUES
+(1, 'Adam', 'Kowalski', 1624.50, 'magazynier', '85121201234'),
+(2, 'Adam', 'Nowak', 3760.00, 'kierownik', '90010111234'),
+(3, 'Andrzej', 'Kowalski', 4200.00, 'kierownik', '82020209876'),
+(4, 'Arkadiusz', 'Malinowski', 1600.00, 'kierowca', '93110212345'),
+(5, 'Andrzej', 'Malinowski', 1450.00, 'sprzedawca', NULL),
+(6, 'Krzysztof', 'Nowicki', 1300.00, 'sprzedawca', NULL),
+(7, 'Kacper', 'Adamczyk', 1610.50, 'serwisant', '92090912468'),
+(8, 'Kamil', 'Andrzejczak', 1200.00, 'asystent', NULL),
+(9, 'Krzysztof', 'Arkuszewski', 1500.00, 'magazynier', '80123109876'),
+(10, 'Kamil', 'Borowski', 1600.00, 'sprzedawca', '95050515432');
+
+-- Dodanie własnego rekordu
+INSERT INTO pracownicy (id, imie, nazwisko, placa, stanowisko, pesel) VALUES
+(11, 'TwojeImie', 'TwojeNazwisko', 2000.00, 'TwojeStanowisko', '12345678901');
+
+SELECT * FROM pracownicy;
+
+SELECT imie, nazwisko, placa AS wynagrodzenie FROM pracownicy;
+
+SELECT * FROM pracownicy ORDER BY nazwisko ASC;
+
+SELECT * FROM pracownicy ORDER BY nazwisko DESC;
+
+SELECT * FROM pracownicy ORDER BY nazwisko ASC, placa DESC;
+
+SELECT * FROM pracownicy WHERE nazwisko = 'Kowalski';
+
+SELECT * FROM pracownicy WHERE placa < 1500;
+
+SELECT * FROM pracownicy WHERE id >= 4 AND id <= 8;
+
+SELECT * FROM pracownicy WHERE id BETWEEN 4 AND 8;
+
+SELECT * FROM pracownicy WHERE placa BETWEEN 1500 AND 1700 ORDER BY placa;
+
+SELECT * FROM pracownicy WHERE id = 4 OR id = 6 OR id = 8;
+
+SELECT * FROM pracownicy WHERE id IN (4, 6, 8);
+
+SELECT * FROM pracownicy WHERE imie LIKE 'K%';
+
+SELECT id, imie, nazwisko FROM pracownicy WHERE pesel IS NULL;
+
+SELECT * FROM pracownicy WHERE placa > 1500 AND stanowisko <> 'kierownik' AND pesel IS NOT NULL;
+
+SELECT DISTINCT nazwisko FROM pracownicy ORDER BY nazwisko;
+
+SELECT * FROM pracownicy WHERE stanowisko = 'kierownik';
+
+SELECT * FROM pracownicy WHERE nazwisko LIKE 'A%';
+
+SELECT * FROM pracownicy WHERE nazwisko NOT LIKE '%i';
+
+SELECT * FROM pracownicy WHERE nazwisko LIKE '%c%';
+
+SELECT * FROM pracownicy WHERE stanowisko LIKE 's%';
+
+SELECT * FROM pracownicy WHERE nazwisko LIKE 'A%' OR nazwisko LIKE 'M%';
+
+SELECT nazwisko, placa FROM pracownicy WHERE placa > 1600;
+
+SELECT * FROM pracownicy WHERE id % 2 <> 0;
+
+SELECT imie, nazwisko FROM pracownicy WHERE stanowisko = 'sprzedawca' ORDER BY nazwisko;
+
+SELECT * FROM pracownicy WHERE stanowisko <> 'sprzedawca' AND pesel IS NOT NULL AND placa < 2000;
+
+SELECT nazwisko, placa FROM pracownicy ORDER BY placa DESC;
+
+SELECT nazwisko, placa FROM pracownicy ORDER BY placa DESC LIMIT 3;
+
+SELECT nazwisko, placa FROM pracownicy ORDER BY placa ASC LIMIT 3;
+
+SELECT DISTINCT stanowisko FROM pracownicy;
+
